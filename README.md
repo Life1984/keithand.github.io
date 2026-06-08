@@ -16,6 +16,12 @@ http://127.0.0.1:5501/keithand.github.io/
 https://github.com/Life1984/keithand.github.io/tree/main
 ```
 
+## YouTube Code Walkthrough
+
+```text
+https://youtu.be/tJhGIhVkBfY
+```
+
 ---
 
 ## Project Description

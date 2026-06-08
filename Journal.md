@@ -4,6 +4,13 @@
 
 ---
 
+## YouTube Code Walkthrough
+
+```text
+https://youtu.be/tJhGIhVkBfY
+
+---
+
 ### Log Reports
 
 ## Log 1: Project Direction
@@ -427,6 +434,12 @@ That lets the full drawing appear without being cut off.
 ## Log 26: Updated Paint Logic
 Added a special case so that the user will only see the Paint work-in-progress 
 placeholder, as opposed to seeing it in the "All" catagory.
+
+---
+
+## Log 27: Removed Previous Work Sub-Menu
+I decided to remove the "Previous Work" sub-menu, as the whole point of the site
+is to show-off my previous art.
 
 ---
 
