@@ -553,3 +553,72 @@ button:hover {
 .about-secondary-photo img {
   border: 12px solid #ffffff;
 }
+
+/*
+  Paint placeholder:
+  Creates a full-size work-in-progress card for the Paint section.
+  Overrides the normal gallery thumbnail crop.
+*/
+.paint-placeholder-card {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(720px, 100%);
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.paint-placeholder-card:hover {
+  background-color: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+.paint-placeholder-content {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 28px;
+  align-items: center;
+  padding: 42px;
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+}
+
+.paint-message {
+  color: #222222;
+  text-transform: uppercase;
+  letter-spacing: 0.28rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.paint-message h3 {
+  margin: 10px 0;
+  font-size: 1.55rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.paint-message p {
+  margin: 24px 0;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.paint-line {
+  width: 100%;
+  height: 2px;
+  background-color: #222222;
+}
+
+/*
+  Important override:
+  The Paint image should not use the normal 16 / 10 thumbnail crop.
+*/
+.paint-placeholder-card .paint-placeholder-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  cursor: pointer;
+}

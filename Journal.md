@@ -403,6 +403,27 @@ Added proper links to my CS496 and 491 GitLab repos.
 
 ---
 
+## Log 25: Updated "Paint" Sub-Group
+I want to add in an image/text to make the "Paint" section less plain.
+
+Added in a quick sketch/text to highlight that there is no present content.
+
+I added a custom Paint placeholder card so the Paint submenu no longer feels 
+empty. Instead of showing only a plain “Under Construction” message, the Paint 
+category now displays a full work-in-progress layout with text and a drawing.
+
+I also made the Paint card different from the normal gallery cards. Normal 
+artwork thumbnails use a fixed wide crop, but the Paint drawing is tall, so I 
+added custom CSS that overrides the default image crop:
+
+```
+aspect-ratio: auto;
+object-fit: contain;
+```
+That lets the full drawing appear without being cut off.
+
+---
+
 ### Sources Used for Project:
 webdev-lab-notebook - Public Repo on GitHub
 By: caterinasworld - Caterina 
