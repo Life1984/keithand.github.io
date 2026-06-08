@@ -6,35 +6,34 @@
 
 ## Deployed Site
 
-Add deployed GitHub Pages link here:
-
 ```text
-https://USERNAME.github.io/REPOSITORY-NAME/
+http://127.0.0.1:5501/keithand.github.io/
 ```
 
 ## GitHub Repository
 
-Add repository link here:
-
 ```text
-https://github.com/USERNAME/REPOSITORY-NAME
+https://github.com/Life1984/keithand.github.io/tree/main
 ```
+
+---
 
 ## Project Description
 
-This website is an online portfolio for displaying my artwork and related work.
+This website is an online portfolio for displaying my artwork and related CS work.
 
 The homepage focuses on a large artwork gallery. A fixed sidebar on the left provides navigation between the main sections of the site.
 
-The main sections are:
+The main sections are as follows:
 
 ```text
 Work
 About
-Previous Work
 Projects
 Contact
 ```
+
+---
 
 ## Features
 
@@ -47,11 +46,11 @@ Contact
 - Light gray hover effect on artwork images
 - Clickable lightbox image preview
 - About section
-- Previous Work section
 - Projects section
 - Contact form
 - JavaScript form validation
-- Responsive layout for smaller screens
+
+---
 
 ## Artwork Categories
 
@@ -72,6 +71,8 @@ Digital: MS_Paint01.png through MS_Paint04.png
 Paint: future artwork category
 ```
 
+---
+
 ## Technologies Used
 
 - HTML
@@ -91,12 +92,14 @@ README.md
 images/
 ```
 
+---
+
 ## How to Run Locally
 
 Clone the repository:
 
 ```bash
-git clone git@github.com:USERNAME/REPOSITORY-NAME.git
+git clone git@github.com:Life1984/keithand.github.io.git
 ```
 
 Move into the project folder:
@@ -117,6 +120,8 @@ Open the site in a browser:
 http://localhost:8000
 ```
 
+---
+
 ## How to Deploy with GitHub Pages
 
 1. Push the project to GitHub.
@@ -129,19 +134,11 @@ http://localhost:8000
 8. Save the settings.
 9. Copy the deployed site URL into this README.
 
-## Outside Sources and References
+---
 
-### Visual Inspiration
+### Outside Sources and References
 
-Courtney Poy portfolio website:
-
-```text
-https://www.courtneypoy.com/
-```
-
-I use this site as visual inspiration for the simple left-side navigation, white space, and image-focused portfolio layout. I do not copy the site's code.
-
-### Course Example Files
+## Course Example Files
 
 I use these course examples as references:
 
@@ -161,29 +158,25 @@ How they connect to this project:
 07-buttons.html: inspires the filter buttons and contact form button
 ```
 
-### Project Rubric
+## Other Sources:
+webdev-lab-notebook - Public Repo on GitHub
+By: caterinasworld - Caterina 
+https://github.com/caterinasworld/webdev-lab-notebook/tree/main
 
-Final project rubric:
+"24 Eye-Catching About Me Website Examples"
+By: Denitsa Zhelyazkova
+https://reallygooddesigns.com/about-me-website-examples/
 
-```text
-Final_Project_Rubric.pdf
-```
+"CSS Hover Effects: 40 Engaging Animations To Try"
+By: Nefe Emadamerho-Atori
+https://prismic.io/blog/css-hover-effects
 
-I use the rubric to check that the site includes the required sections, JavaScript interaction, documentation, and deployment information.
+"Build a Dropdown Submenu with HTML and CSS"
+By: Treehouse
+https://www.youtube.com/watch?v=3KVqLx6672o
 
-## Notes
+"Simple Image Lightbox Tutorial"
+By: Web Dev Simplified
+https://www.youtube.com/watch?v=uKVVSwXdLr0&t=63s
 
-The contact form is currently front-end only. It validates the form fields with JavaScript, but it does not send messages to a server.
-
-The Paint category is included for future artwork. It currently displays an empty-category message if no painting images are added.
-
-## Future Improvements
-
-- Add real project repository links
-- Add final deployed GitHub Pages link
-- Add more artwork descriptions
-- Add painting images
-- Improve image alt text
-- Add more detailed project cards
-- Test accessibility with an automated checker
-- Test the layout on mobile devices
+---
