@@ -398,6 +398,11 @@ Didn't serve a purpose. Will potentially make it work in the future.
 
 ---
 
+## Log 24: Updated my Previous "Projects" Tab
+Added proper links to my CS496 and 491 GitLab repos.
+
+---
+
 ### Sources Used for Project:
 webdev-lab-notebook - Public Repo on GitHub
 By: caterinasworld - Caterina 

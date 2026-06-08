@@ -140,7 +140,7 @@ http://localhost:8000
 
 ## Course Example Files
 
-I use these course examples as references:
+I used these course examples as references:
 
 ```text
 01-grid.html
