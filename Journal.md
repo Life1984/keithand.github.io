@@ -2,8 +2,6 @@
 # Name: Keith Anderson  
 # Class: CS463
 
-[TOC]
-
 ---
 
 ### Log Reports
