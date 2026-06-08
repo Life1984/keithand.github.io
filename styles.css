@@ -1,0 +1,382 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #222222;
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+  Overall page layout:
+  Replaces the standard top navbar from 04-navbar.html with a fixed
+  left sidebar. 
+*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 230px;
+  min-height: 100vh;
+  padding: 32px 24px;
+  background-color: #ffffff;
+}
+
+.sidebar h1 {
+  margin: 0 0 36px;
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 0.45rem;
+  line-height: 1.35;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/*
+  Radio-style navigation:
+  The real radio inputs are hidden, but their labels remain visible.
+  Text itself behave like the clickable control.
+*/
+.side-nav input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.side-nav label {
+  width: fit-content;
+  color: #777777;
+  font-size: 1rem;
+  letter-spacing: 0.18rem;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.side-nav label:hover,
+.side-nav input:focus-visible + label {
+  color: #222222;
+  background-color: #eeeeee;
+  padding-left: 6px;
+}
+
+.side-nav input:checked + label {
+  color: #111111;
+  font-weight: 600;
+}
+
+/*
+  Work submenu:
+  This behaves like a small dropdown underneath the WORK navigation item.
+  It appears when WORK is selected.
+*/
+.work-submenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin: -4px 0 8px 18px;
+  padding-left: 10px;
+  border-left: 1px solid #dddddd;
+}
+
+/*
+  Hide the Work submenu when another main section is selected.
+*/
+#work-radio:not(:checked) + label + .work-submenu {
+  display: none;
+}
+
+/*
+  Category buttons = 07-buttons.html, but they are styled to look 
+  like quiet sidebar text.
+*/
+.filter-button {
+  border: none;
+  padding: 2px 4px;
+  color: #888888;
+  background-color: transparent;
+  font-size: 0.82rem;
+  letter-spacing: 0.14rem;
+  cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: #222222;
+  background-color: #eeeeee;
+}
+
+.active-filter {
+  color: #111111;
+  font-weight: 600;
+}
+
+.page-content {
+  margin-left: 260px;
+  padding: 32px 48px 64px;
+}
+
+.content-section {
+  display: none;
+}
+
+.active-section {
+  display: block;
+}
+
+/*
+  Gallery grid:
+  01-grid.html.
+  Instead of Bootstrap's row and col classes, this uses CSS Grid so the artwork
+  can keep a clean three-column gallery layout.
+*/
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 72px 80px;
+  align-items: start;
+}
+
+/*
+  Artwork cards:
+  06-cards.html.
+  The card structure exists, but most of the visual attention stays on the image.
+*/
+.art-card {
+  margin: 0;
+  padding: 10px;
+  background-color: transparent;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/*
+  Hover effect creates the light gray highlight requested for the artwork.
+*/
+.art-card:hover {
+  background-color: #eeeeee;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.art-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/*
+  This class is added and removed by JavaScript when the user chooses
+  Pen/Pencil, Digital, Paint, or All.
+*/
+.art-card.is-hidden {
+  display: none;
+}
+
+.empty-gallery-message {
+  display: none;
+  margin-top: 32px;
+  color: #777777;
+  letter-spacing: 0.08rem;
+}
+
+.empty-gallery-message.visible {
+  display: block;
+}
+
+.content-section h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.18rem;
+}
+
+.content-section p {
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+.simple-list {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+/*
+  Project cards:
+  6-cards.html.
+*/
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  border: 1px solid #dddddd;
+  padding: 24px;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  font-weight: 400;
+}
+
+.project-card a {
+  color: #333333;
+}
+
+form {
+  max-width: 620px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-row label {
+  margin-bottom: 6px;
+  letter-spacing: 0.08rem;
+}
+
+input,
+textarea {
+  border: 1px solid #bbbbbb;
+  padding: 10px;
+  font: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #999999;
+  outline-offset: 2px;
+}
+
+/*
+  Contact button:
+  07-buttons.html.
+  Neutral black, white, and gray.
+*/
+button {
+  border: 1px solid #222222;
+  padding: 10px 18px;
+  color: #222222;
+  background-color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #eeeeee;
+}
+
+#form-status {
+  margin-top: 16px;
+}
+
+/*
+  Lightbox:
+  Lets users click an artwork image to see a larger version.
+*/
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  padding: 48px;
+  background-color: rgba(255, 255, 255, 0.92);
+}
+
+.lightbox.visible {
+  display: grid;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+
+#close-lightbox {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  border: none;
+  font-size: 2.5rem;
+  line-height: 1;
+  background-color: transparent;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/*
+  Responsive layout:
+  01-grid.html 
+*/
+@media (max-width: 1050px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 48px;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .sidebar h1 {
+    margin-bottom: 24px;
+  }
+
+  .side-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px 20px;
+  }
+
+  .work-submenu {
+    flex-basis: 100%;
+    margin: -4px 0 8px 0;
+  }
+
+  .page-content {
+    margin-left: 0;
+    padding: 24px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

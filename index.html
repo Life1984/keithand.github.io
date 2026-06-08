@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- Title -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,14 +9,52 @@
   </head>
 
   <body>
+    <!-- 
+    04-navbar.html 
+    Vertical navbar 
+    -->
     <aside class="sidebar">
       <header>
         <h1>KEITH<br />ANDERSON</h1>
       </header>
 
+      <!--
+        The visible navigation items act like radio buttons.
+        Real radio inputs are hidden with CSS, and the labels become
+        the clickable text controls.
+      -->
       <nav class="side-nav" aria-label="Main navigation">
         <input type="radio" name="section" id="work-radio" checked />
         <label for="work-radio" data-section="work">WORK</label>
+
+        <!--
+          Work submenu:
+          Buttons filter the artwork gallery by category.
+          Pen and pencil = Pen/Pencil category.
+          MS Paint drawings = Digital category.
+          Paint = future category.
+        -->
+        <div class="work-submenu">
+          <button
+            type="button"
+            class="filter-button active-filter"
+            data-filter="all"
+          >
+            ALL
+          </button>
+
+          <button type="button" class="filter-button" data-filter="pen-pencil">
+            PEN/PENCIL
+          </button>
+
+          <button type="button" class="filter-button" data-filter="digital">
+            DIGITAL
+          </button>
+
+          <button type="button" class="filter-button" data-filter="paint">
+            PAINT
+          </button>
+        </div>
 
         <input type="radio" name="section" id="about-radio" />
         <label for="about-radio" data-section="about">ABOUT</label>
@@ -34,69 +73,157 @@
     </aside>
 
     <main class="page-content">
+      <!--
+        Gallery layout = 01-grid.html
+        Instead of Bootstrap rows and columns, this version uses CSS Grid so
+        the artwork can resize more naturally.
+      -->
       <section id="work" class="content-section active-section">
         <h2 class="visually-hidden">Artwork Gallery</h2>
 
         <div class="gallery-grid">
-          <article class="art-card">
-            <img src="images/artwork-01.jpg" alt="Artwork by Keith Anderson" />
+          <!-- Each artwork item is treated like a simplified card = 06-cards.html -->
+          <article class="art-card" data-category="pen-pencil">
+            <img
+              src="images/pen01.jpg"
+              alt="Pen and pencil page with multiple character studies"
+            />
           </article>
 
-          <article class="art-card">
-            <img src="images/artwork-02.jpg" alt="Artwork by Keith Anderson" />
+          <article class="art-card" data-category="pen-pencil">
+            <img
+              src="images/pen02.jpg"
+              alt="Pen and pencil abstract profile composition with leaves and clouds"
+            />
           </article>
 
-          <article class="art-card">
-            <img src="images/artwork-03.jpg" alt="Artwork by Keith Anderson" />
+          <article class="art-card" data-category="pen-pencil">
+            <img
+              src="images/pen03.jpg"
+              alt="Pen and pencil drawing of a mechanical hand"
+            />
           </article>
 
-          <article class="art-card">
-            <img src="images/artwork-04.jpg" alt="Artwork by Keith Anderson" />
+          <article class="art-card" data-category="pen-pencil">
+            <img
+              src="images/pen04.jpg"
+              alt="Pen and pencil drawing of a person looking through a window"
+            />
           </article>
 
-          <article class="art-card">
-            <img src="images/artwork-05.jpg" alt="Artwork by Keith Anderson" />
+          <article class="art-card" data-category="pen-pencil">
+            <img
+              src="images/pen05.jpg"
+              alt="Pen and pencil drawing of a figure and small animal under falling shapes"
+            />
           </article>
 
-          <article class="art-card">
-            <img src="images/artwork-06.jpg" alt="Artwork by Keith Anderson" />
+          <article class="art-card" data-category="pen-pencil">
+            <img
+              src="images/pen06.jpg"
+              alt="Pen and pencil drawing of a small character with a butterfly net"
+            />
+          </article>
+
+          <article class="art-card" data-category="pen-pencil">
+            <img
+              src="images/pen07.jpg"
+              alt="Pen and pencil drawing of a seated figure with an umbrella"
+            />
+          </article>
+
+          <article class="art-card" data-category="pen-pencil">
+            <img
+              src="images/pen08.jpg"
+              alt="Pen and pencil sketch page with several travel postcard concepts"
+            />
+          </article>
+
+          <article class="art-card" data-category="pen-pencil">
+            <img
+              src="images/pen09.jpg"
+              alt="Pen and pencil sketch page with figure studies and red accent marks"
+            />
+          </article>
+
+          <article class="art-card" data-category="digital">
+            <img
+              src="images/MS_Paint01.png"
+              alt="Digital MS Paint drawing of a character portrait"
+            />
+          </article>
+
+          <article class="art-card" data-category="digital">
+            <img
+              src="images/MS_Paint02.png"
+              alt="Digital MS Paint drawing of a person lying on a floor"
+            />
+          </article>
+
+          <article class="art-card" data-category="digital">
+            <img
+              src="images/MS_Paint03.png"
+              alt="Digital MS Paint black and white portrait with a hand gesture"
+            />
+          </article>
+
+          <article class="art-card" data-category="digital">
+            <img
+              src="images/MS_Paint04.png"
+              alt="Digital MS Paint portrait study"
+            />
           </article>
         </div>
+
+        <p id="empty-gallery-message" class="empty-gallery-message">
+          Under Construction.
+        </p>
       </section>
 
       <section id="about" class="content-section">
         <h2>About</h2>
-        <p>The "about section."</p>
+
+        <p>
+          Greetings! My name is Keith Anderson, and this is my digital
+          portfolio, where I intend to keep both past and present works.
+        </p>
+
         <p>
           This site is designed around a simple gallery-first layout so that the
-          artwork remains the central focus.
+          artwork remains the central focus. The visual style emphasizes white
+          space, line work, quiet navigation, and a minimal structure that lets
+          each image stand on its own.
         </p>
       </section>
 
       <section id="previous" class="content-section">
         <h2>Previous Work</h2>
-        <p>Previous works.</p>
+
+        <p>Resume Summery.</p>
 
         <ul class="simple-list">
           <li>Artwork and visual portfolio development</li>
           <li>Web development coursework using HTML, CSS, and JavaScript</li>
           <li>Responsive layout and accessibility-focused design</li>
+          <li>Gallery design, image organization, and category filtering</li>
         </ul>
       </section>
 
       <section id="projects" class="content-section">
         <h2>Projects</h2>
 
+        <!--
+          Project Entries = 06-cards.html.
+          Title, description, and link -> Each Card
+        -->
         <div class="project-list">
           <article class="project-card">
             <h3>Personal Art Portfolio</h3>
             <p>
-              A responsive portfolio website designed to display artwork,
-              background information, and contact details.
+              Portfolio website designed to display artwork, background
+              information, and contact details.
             </p>
-            <a href="#" aria-label="View Personal Art Portfolio repository">
-              GitHub Repository
-            </a>
+            <a href="#">GitHub Repository</a>
           </article>
 
           <article class="project-card">
@@ -105,23 +232,13 @@
               A collection of web development exercises covering layout,
               navigation, forms, and JavaScript interaction.
             </p>
-            <a
-              href="#"
-              aria-label="View Web Development Lab Notebook repository"
-            >
-              GitHub Repository
-            </a>
+            <a href="#">GitHub Repository</a>
           </article>
 
           <article class="project-card">
             <h3>Artwork Archive</h3>
-            <p>
-              A planned project for organizing artwork images, descriptions,
-              dates, and materials.
-            </p>
-            <a href="#" aria-label="View Artwork Archive repository">
-              GitHub Repository
-            </a>
+            <p>A collection of my past works..</p>
+            <a href="#">GitHub Repository</a>
           </article>
         </div>
       </section>
@@ -145,12 +262,17 @@
             <textarea id="message" name="message" rows="6"></textarea>
           </div>
 
+          <!-- Button connects back to the button examples in 07-buttons.html -->
           <button type="submit">Send Message</button>
           <p id="form-status" aria-live="polite"></p>
         </form>
       </section>
     </main>
 
+    <!--
+      Clicking artwork opens a larger preview, and JavaScript controls 
+      whether this element is visible.
+    -->
     <div id="lightbox" class="lightbox" aria-hidden="true">
       <button id="close-lightbox" aria-label="Close image preview">×</button>
       <img id="lightbox-image" src="" alt="" />
