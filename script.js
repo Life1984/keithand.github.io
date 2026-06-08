@@ -53,11 +53,22 @@ navLabels.forEach((label) => {
 
 function filterGallery(selectedCategory) {
   let visibleCount = 0;
+  const normalizedSelectedCategory = selectedCategory.trim().toLowerCase();
 
   artCards.forEach((card) => {
     const cardCategory = card.dataset.category;
 
-    if (selectedCategory === "all" || cardCategory === selectedCategory) {
+    if (!cardCategory) {
+      card.classList.add("is-hidden");
+      return;
+    }
+
+    const normalizedCardCategory = cardCategory.trim().toLowerCase();
+
+    if (
+      normalizedSelectedCategory === "all" ||
+      normalizedCardCategory === normalizedSelectedCategory
+    ) {
       card.classList.remove("is-hidden");
       visibleCount += 1;
     } else {
@@ -85,6 +96,11 @@ filterButtons.forEach((button) => {
 
     button.classList.add("active-filter");
     filterGallery(selectedCategory);
+
+    document.querySelector("#work").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   });
 });
 

@@ -335,11 +335,51 @@ I want to add titles to the image cards, along with assigning dates to them.
 they are drawings from popular Manga/Anime).
 
 
+DID NOT WORK:
+```
+<!-- Card02 -->
+<article class="art-card" data-category="pen-pencil">
+    <img
+    src="images/pen02.jpg"
+    alt="Pen and Pencil - Luffy"
+    />
 
+    <div class="art-info"
+    <h3>Monkey D. Luffy - One Piece</h3>
+    <p>Pen/Pencil, 2026</p>
+    <p>A close-up drawing of "Luffy" from the renowed series - "One Piece" by: Eiichiro Oda</p>
+    </div>
+    </article>
+```
 
+'.art-info' was taking up normal page space. Needed to be absolutely positioned 
+over the image and hidden until hover.
 
+Filter buttons are now bricked?...
+
+Somehow forgot to add closing '>' - bricked the gallery structure/filtering.
+
+Added the following format to image cards:
+
+```text
+Name of Charact/Scene - Series 
+Art Type - Date
+Small Description of image/original creator 
+```
 
 ---
+
+## Log 21: Made Hidden Cards Actually Disappear
+Ensures filtered-out cards are removed from the layout:
+
+```
+.art-card.is-hidden {
+  display: none !important;
+}
+```
+
+---
+
 
 ### Sources Used for Project:
 webdev-lab-notebook - Public Repo on GitHub

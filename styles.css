@@ -152,11 +152,12 @@ body {
   The card structure exists, but most of the visual attention stays on the image.
 */
 .art-card {
+  position: relative;
   margin: 0;
-  padding: 10px;
+  padding: 0;
   background-color: transparent;
+  overflow: hidden;
   transition:
-    background-color 0.2s ease,
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
@@ -164,8 +165,8 @@ body {
 /*
   Hover effect creates the light gray highlight requested for the artwork.
 */
-.art-card:hover {
-  background-color: #eeeeee;
+.art-card:hover,
+.art-card:focus {
   transform: translateY(-2px);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
@@ -179,22 +180,67 @@ body {
 }
 
 /*
-  This class is added and removed by JavaScript when the user chooses
-  Pen/Pencil, Digital, Paint, or All.
+  Hidden artwork information overlay.
+  Makes the title/date/description appear on top of the image
+  instead of below it.
 */
-.art-card.is-hidden {
-  display: none;
+.art-info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 24px;
+  color: #222222;
+  text-align: center;
+  background-color: rgba(238, 238, 238, 0.86);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
 }
 
+.art-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.04rem;
+}
+
+.art-info p {
+  max-width: 85%;
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.art-card:hover .art-info,
+.art-card:focus .art-info,
+.art-card:focus-within .art-info {
+  opacity: 1;
+}
+
+.art-card.is-hidden {
+  display: none !important;
+}
+
+/* Made so the message appears clearly in the main content area */
 .empty-gallery-message {
   display: none;
-  margin-top: 32px;
+  width: 100%;
+  min-height: 45vh;
+  margin: 0;
   color: #777777;
-  letter-spacing: 0.08rem;
+  font-size: 1rem;
+  letter-spacing: 0.12rem;
+  text-align: center;
 }
 
 .empty-gallery-message.visible {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content-section h2 {
