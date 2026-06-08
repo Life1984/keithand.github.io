@@ -426,3 +426,130 @@ button:hover {
     gap: 32px;
   }
 }
+
+/*
+  Refined About Me page:
+  Wider editorial layout with text on the left and photos on the right.
+*/
+/*
+  Refined About Me page:
+  Minimal editorial layout with text on the left and layered images on the right.
+*/
+.section-label {
+  margin: 0 0 12px;
+  color: #777777;
+  font-size: 0.8rem;
+  letter-spacing: 0.22rem;
+}
+
+.about-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(360px, 460px) minmax(680px, 1fr);
+  gap: clamp(56px, 7vw, 120px);
+  align-items: start;
+  width: min(100%, 1500px);
+  padding-top: 28px;
+}
+
+/*
+  Subtle background panel:
+  This gives the page structure without breaking the minimalist theme.
+*/
+.about-layout::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -32px;
+  width: 520px;
+  height: 100%;
+  background-color: #fafafa;
+  z-index: -1;
+}
+
+.about-text {
+  max-width: 460px;
+}
+
+.about-text h2 {
+  margin: 0 0 22px;
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0.14rem;
+}
+
+.about-intro {
+  font-size: 1.06rem;
+  line-height: 1.85;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.about-details {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #dddddd;
+}
+
+.about-details p {
+  margin: 9px 0;
+  max-width: none;
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.about-images {
+  position: relative;
+  min-height: 560px;
+}
+
+/*
+  Soft gray shape behind the photos.
+*/
+.about-images::before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 38px;
+  right: 28px;
+  bottom: 92px;
+  background-color: #f1f1f1;
+  z-index: 0;
+}
+
+.about-main-photo,
+.about-secondary-photo {
+  position: relative;
+  margin: 0;
+  z-index: 1;
+}
+
+.about-main-photo img,
+.about-secondary-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-main-photo {
+  width: 100%;
+  height: clamp(380px, 35vw, 520px);
+}
+
+.about-secondary-photo {
+  position: absolute;
+  left: -70px;
+  bottom: 28px;
+  width: clamp(360px, 42%, 540px);
+  height: clamp(190px, 16vw, 280px);
+  background-color: #ffffff;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+}
+
+.about-secondary-photo img {
+  border: 12px solid #ffffff;
+}

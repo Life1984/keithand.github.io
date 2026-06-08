@@ -380,11 +380,32 @@ Ensures filtered-out cards are removed from the layout:
 
 ---
 
+## Log 22: Refining my About Me Page
+Looking over the current section, it lacks any artistic flaire, which sorta
+defeats the purpose/overall theme I'm going for.
+
+Used the following website for inspiration:
+https://reallygooddesigns.com/about-me-website-examples/
+
+Used two previous images of myself for the About Me page.
+
+Added background shadow to both the secondary image of me, and to the text block.
+
+---
+
+## Log 23: Commented out "Previous Work" Label
+Didn't serve a purpose. Will potentially make it work in the future.
+
+---
 
 ### Sources Used for Project:
 webdev-lab-notebook - Public Repo on GitHub
 By: caterinasworld - Caterina 
 https://github.com/caterinasworld/webdev-lab-notebook/tree/main
+
+"24 Eye-Catching About Me Website Examples"
+By: Denitsa Zhelyazkova
+https://reallygooddesigns.com/about-me-website-examples/
 
 "CSS Hover Effects: 40 Engaging Animations To Try"
 By: Nefe Emadamerho-Atori

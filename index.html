@@ -59,10 +59,12 @@
         <input type="radio" name="section" id="about-radio" />
         <label for="about-radio" data-section="about">ABOUT</label>
 
+        <!--
         <input type="radio" name="section" id="previous-radio" />
         <label for="previous-radio" data-section="previous"
           >PREVIOUS WORK</label
         >
+        -->
 
         <input type="radio" name="section" id="projects-radio" />
         <label for="projects-radio" data-section="projects">PROJECTS</label>
@@ -187,7 +189,7 @@
             </div>
           </article>
 
-          <!-- Card08 -->
+          <!-- Card08 
           <article class="art-card" data-category="pen-pencil">
             <img
               src="images/pen08.jpg"
@@ -202,6 +204,7 @@
               </p>
             </div>
           </article>
+        -->
 
           <!-- Card09 -->
           <article class="art-card" data-category="pen-pencil">
@@ -291,33 +294,58 @@
         </p>
       </section>
 
+      <!-- 
+      About Me Page 
+      UPDATED: Looks awesome now, with actual photos of me
+      -->
       <section id="about" class="content-section">
-        <h2>About</h2>
+        <div class="about-layout">
+          <div class="about-text">
+            <p class="section-label">ABOUT ME</p>
 
-        <p>
-          Greetings! My name is Keith Anderson, and this is my digital
-          portfolio, where I intend to keep both past and present works.
-        </p>
+            <h2>Keith Anderson</h2>
 
-        <p>
-          This site is designed around a simple gallery-first layout so that the
-          artwork remains the central focus. The visual style emphasizes white
-          space, line work, quiet navigation, and a minimal structure that lets
-          each image stand on its own.
-        </p>
-      </section>
+            <p class="about-intro">
+              Greetings! My name is Keith Anderson, and this is my digital
+              portfolio, where I keep both past and present works.
+            </p>
 
-      <section id="previous" class="content-section">
-        <h2>Previous Work</h2>
+            <p>
+              I am interested in line work/cross-hatching, character-focused
+              imagery, visual mood, and the quiet details that give an image
+              personality. This site is built around a gallery-first layout so
+              the artwork remains the central focus.
+            </p>
 
-        <p>Resume Summery.</p>
+            <div class="about-details">
+              <p><strong>Mediums:</strong> Pen/Pencil, Digital, Paint</p>
+              <p>
+                <strong>Focus:</strong> Illustration, character studies,
+                composition
+              </p>
+              <p>
+                <strong>Current Goal:</strong> Building a clean archive of my
+                work
+              </p>
+            </div>
+          </div>
 
-        <ul class="simple-list">
-          <li>Artwork and visual portfolio development</li>
-          <li>Web development coursework using HTML, CSS, and JavaScript</li>
-          <li>Responsive layout and accessibility-focused design</li>
-          <li>Gallery design, image organization, and category filtering</li>
-        </ul>
+          <div class="about-images">
+            <figure class="about-main-photo">
+              <img
+                src="images/about/KeithSky.png"
+                alt="Black and white portrait of Keith Anderson standing beneath the sky"
+              />
+            </figure>
+
+            <figure class="about-secondary-photo">
+              <img
+                src="images/about/RoughDayTeaching.png"
+                alt="Portrait of Keith Anderson seated outdoors and looking down"
+              />
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section id="projects" class="content-section">
