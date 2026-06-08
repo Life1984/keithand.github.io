@@ -6,6 +6,8 @@
 
 ---
 
+### Log Reports
+
 ## Log 1: Project Direction
 I want the site to feel simple, clean, and focused on the images.
 
@@ -330,3 +332,21 @@ Everything seems to check out, thus far.
 
 ---
 
+### Sources Used for Project:
+webdev-lab-notebook - Public Repo on GitHub
+By: caterinasworld - Caterina 
+https://github.com/caterinasworld/webdev-lab-notebook/tree/main
+
+"CSS Hover Effects: 40 Engaging Animations To Try"
+By: Nefe Emadamerho-Atori
+https://prismic.io/blog/css-hover-effects
+
+"Build a Dropdown Submenu with HTML and CSS"
+By: Treehouse
+https://www.youtube.com/watch?v=3KVqLx6672o
+
+"Simple Image Lightbox Tutorial"
+By: Web Dev Simplified
+https://www.youtube.com/watch?v=uKVVSwXdLr0&t=63s
+
+---
