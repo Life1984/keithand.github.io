@@ -4,10 +4,23 @@
 
 ---
 
+## Deployed Site
+
+```text
+http://127.0.0.1:5501/keithand.github.io/
+```
+
+## GitHub Repository
+
+```text
+https://github.com/Life1984/keithand.github.io/tree/main
+```
+
 ## YouTube Code Walkthrough
 
 ```text
 https://youtu.be/tJhGIhVkBfY
+```
 
 ---
 
