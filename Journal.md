@@ -311,7 +311,6 @@ message saying no artwork has been added).
 ---
 
 ## Log 19: Local Testing
-
 I plan to test the site locally with:
 
 ```bash
@@ -327,6 +326,18 @@ http://localhost:8000
 I test the gallery, filters, lightbox, form validation, and responsive layout.
 
 Everything seems to check out, thus far.
+
+---
+
+## Log 20: Image Card Descriptions/Time 
+I want to add titles to the image cards, along with assigning dates to them.
+(I want to be sure to highlight that these are NOT my original creations - that
+they are drawings from popular Manga/Anime).
+
+
+
+
+
 
 ---
 
