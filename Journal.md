@@ -424,6 +424,12 @@ That lets the full drawing appear without being cut off.
 
 ---
 
+## Log 26: Updated Paint Logic
+Added a special case so that the user will only see the Paint work-in-progress 
+placeholder, as opposed to seeing it in the "All" catagory.
+
+---
+
 ### Sources Used for Project:
 webdev-lab-notebook - Public Repo on GitHub
 By: caterinasworld - Caterina 

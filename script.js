@@ -57,6 +57,9 @@ function filterGallery(selectedCategory) {
 
   artCards.forEach((card) => {
     const cardCategory = card.dataset.category;
+    const isPaintPlaceholder = card.classList.contains(
+      "paint-placeholder-card"
+    );
 
     if (!cardCategory) {
       card.classList.add("is-hidden");
@@ -64,6 +67,16 @@ function filterGallery(selectedCategory) {
     }
 
     const normalizedCardCategory = cardCategory.trim().toLowerCase();
+
+    /*
+      Special case:
+      The Paint work-in-progress card should only appear when the user
+      specifically selects the Paint submenu. 
+    */
+    if (isPaintPlaceholder && normalizedSelectedCategory !== "paint") {
+      card.classList.add("is-hidden");
+      return;
+    }
 
     if (
       normalizedSelectedCategory === "all" ||
