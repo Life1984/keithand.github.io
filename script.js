@@ -117,7 +117,7 @@ filterButtons.forEach((button) => {
   });
 });
 
-agrtImages.forEach((image) => {
+artImages.forEach((image) => {
   image.addEventListener("click", () => {
     lightboxImage.src = image.src;
     lightboxImage.alt = image.alt;
